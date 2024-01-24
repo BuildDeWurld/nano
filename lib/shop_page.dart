@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'service_page.dart';
+
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
 
@@ -13,7 +15,13 @@ class _ShopPageState extends State<ShopPage> {
     return Scaffold(
       body: SafeArea(
           child: Center(
-        child: Text("Home page"),
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const ServicePage();
+              }));
+            },
+            child: const Text("Navigate to service page")),
       )),
     );
   }

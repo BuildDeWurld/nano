@@ -18,13 +18,13 @@ class _AgentState extends State<Agent> {
       appBar: AppBar(
         backgroundColor: Colors.purple,
       ),
-      drawer: NavDrawer(),
+      drawer: const NavDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
             Container(
-              padding: EdgeInsets.all(0),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(0),
+              decoration: const BoxDecoration(
                   color: Colors.purple,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.elliptical(60, 30),
@@ -35,24 +35,24 @@ class _AgentState extends State<Agent> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "AGENCY BANKING",
                       style: TextStyle(color: Colors.white, fontSize: 24),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("WALLET BALANCE",
+                        const Text("WALLET BALANCE",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 18)),
                         showBalance
-                            ? Text("  N1234567890  ",
+                            ? const Text("  N1234567890  ",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18))
-                            : Text("  N ********** ",
+                            : const Text("  N ********** ",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18)),
                         IconButton(
@@ -62,11 +62,11 @@ class _AgentState extends State<Agent> {
                               });
                             },
                             icon: showBalance
-                                ? Icon(
+                                ? const Icon(
                                     Icons.remove_red_eye,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.panorama_fish_eye,
                                     color: Colors.white,
                                   ))
@@ -76,10 +76,10 @@ class _AgentState extends State<Agent> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
@@ -119,7 +119,7 @@ class AgentContainer extends StatelessWidget {
         width: 150,
         decoration: BoxDecoration(
             color: Colors.grey, borderRadius: BorderRadius.circular(20)),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.mouse),
